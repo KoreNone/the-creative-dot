@@ -44,24 +44,19 @@
     <script>
       var body = document.getElementsByTagName("body")[0]
 
-      document.getElementById('share').onclick = function () {
+      document.getElementById("share").onclick = function () {
         FB.ui({
-          method: 'feed',
-          link: 'https://www.facebook.com/thedotcreativestudio/?hc_ref=NEWSFEED',
-        }, function(response){
-          if (response && !response.error_message) {
-            body.style.background = '#4FBC3C'
-          } else {
-            body.style.background = '#BC3C3C'
-          }
+          method: "feed",
+          caption: "Siamo tutti assieme all'evento pù creativo del sud Italia! A Breve Italo Sannino parlerà di UI/UX. L'appuntamento continua domani con altri incredibili ospiti. Vi aspettiamo!",
+          link: "https://www.facebook.com/thedotcreativestudio/?hc_ref=NEWSFEED",
         });
       };
 
       window.fbAsyncInit = function() {
         FB.init({
-          appId   : '1240840762630675',
+          appId   : "1240840762630675",
           xfbml   : true,
-          version : 'v2.8'
+          version : "v2.8"
         });
         FB.AppEvents.logPageView();
       };
@@ -72,7 +67,7 @@
          js = d.createElement(s); js.id = id;
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+       }(document, "script", "facebook-jssdk"));
     </script>
   </body>
 </html>
